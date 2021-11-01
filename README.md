@@ -81,8 +81,7 @@ Provide interaction of your Android application with Firebase services. For this
 ## Initialization Android SDK
 
 To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our [Technical Support Service][TSS]: 
-1. Add necessary permissions
-<br/>
+1. Add necessary permissions <br/>
 Add necessary permissions to your new project and ask a smartphone user to allow these permissions:
 - Internet
 - application operation in the background 
