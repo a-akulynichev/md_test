@@ -1,5 +1,6 @@
 # Kasko2go Open source telematic app for Android
 
+
 ## _Description_
 The Kasko2go Open source service is developed to determine a driving behaviour of a certain driver. This telematic service works with digitised road maps, has the information on static and dynamic  accident rate of different road sections.
 A driver’s smartphone is used as a client telematic device. An accelerometer and a gyroscope, modules of GPS, GSM and Bluetooth systems embedded into a smartphone turn a driver’s smartphone into a source of telematic information. A mobile application installed on the smartphone transmits telematic data to servers for further processing.
