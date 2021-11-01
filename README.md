@@ -183,7 +183,7 @@ The autostart_gps_filters filter with default parameter values is a variable wit
 ```
 
 
-4. Working with Bluetooth module (optional) <bk/>
+4. Working with Bluetooth module (optional) <br/>
 SDK provides an opportunity to identify the trip start moment through connecting the smartphone bluetooth module to the vehicle bluetooth. 
 <br/>
 To work with the smartphone bluetooth module, follow these steps:
@@ -196,7 +196,7 @@ To work with the smartphone bluetooth module, follow these steps:
 5    }
 ```
  
-5. SDK initialisation <bk/>
+5. SDK initialisation <br/>
 To initialise the SDK, follow these steps:
 
 ```
