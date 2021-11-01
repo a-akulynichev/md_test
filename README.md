@@ -38,8 +38,7 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 2 RECEIVER="receiver.kasko2go.net"
 ```
 
-2. Add the lines with access parameters received from out [Technical Support Service][TSS] to the end of the `sdk-telemetry/keystore.properties` file on Step 1. 
-<br/> `sdk-telemetry/keystore.properties` file takes the following form: 
+2. Add the lines with access parameters received from out [Technical Support Service][TSS] to the end of the `sdk-telemetry/keystore.properties` file on Step 1, then this file takes the following form: 
 
 ```
 1 WEB_API="https://scoring-api.kasko2go.net/api/"
