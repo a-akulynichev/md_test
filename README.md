@@ -102,7 +102,7 @@ Add necessary permissions to your new project and ask a smartphone user to allow
  ```
 
 
-2. Implement metadata
+2. Implement metadata <br/>
 Metadata contains extra information about a user, a device and a vehicle:
 - userId - unique identifier of the user
 - deviceId - unique identifier of the device
@@ -125,7 +125,7 @@ The identifiers userId, deviceId, vehicleId are described by the following class
 11    )
 ```
 
-3. Add speed configs
+3. Add speed configs <br/>
 To minimise battery power consumption, in SDK you can configure parameters of the `autostart_gps_filters` filter that has the following set of parameters:
 - time - periodicity of obtaining coordinates from the GPS system, time in seconds   
 - distance - periodicity of obtaining coordinates from the GPS system, distance travelled in metres
@@ -183,7 +183,7 @@ The autostart_gps_filters filter with default parameter values is a variable wit
 ```
 
 
-4. Working with Bluetooth module (optional)
+4. Working with Bluetooth module (optional) <bk/>
 SDK provides an opportunity to identify the trip start moment through connecting the smartphone bluetooth module to the vehicle bluetooth. 
 <br/>
 To work with the smartphone bluetooth module, follow these steps:
@@ -196,7 +196,7 @@ To work with the smartphone bluetooth module, follow these steps:
 5    }
 ```
  
-5. SDK initialisation
+5. SDK initialisation <bk/>
 To initialise the SDK, follow these steps:
 
 ```
