@@ -15,26 +15,60 @@ A driver’s smartphone is used as a client telematic device. An accelerometer a
 
 <br/>
 
-
-
-- Collection and primary processing of telemetry data on vehicle movement taking into account the environmental conditions;
-- Evaluation of risk (probability) of causing an accident by a driver.
-
 This free of charge app can be used to create your own app for Android.
 
 ## Get started
 
-For acquaintance with the Open source solution SDK you need to receive user account data and parameters for accessing repositories of source codes. For this you should: 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
-Provide our Technical Support Service with the information about your Github user account (Github user e-mail address) and receive the following access parameters:
+Provide our [Technical Support Service][TSS] with the information about your Github user account ([Github][git] e-mail address) and receive the following access parameters:
 - USER - account username;
 - PASSWORD - user account password;
 - NAVIGATOR_URL - navigation service address URL. 
 
 
+<br/>
+
+## Telematic data
+
+1. Find the sdk-telemetry/keystore.properties file in the form given below in the source code repository:
+```
+1 WEB_API="https://scoring-api.kasko2go.net/api/"
+2 RECEIVER="receiver.kasko2go.net"
+```
+
+2. Add the lines with access parameters received from out Technical Support Service to the end of the sdk-telemetry/keystore.properties file on Step 1. 
+<br/> sdk-telemetry/keystore.properties file takes the following form: 
+
+```
+1 WEB_API="https://scoring-api.kasko2go.net/api/"
+2 RECEIVER="receiver.kasko2go.net"
+3
+4 USER="<user_name>"
+5 PASSWORD="<user_password>"
+6 NAVIGATOR_URL="<https://navigation_url.host.com/>"
+```
 
 
+## Cartography service
+1. To work with Google autocomplete service receive an API key for the Maps SDK for Android. The procedure for receiving the key is described in [Using API Keys][UAPIK].
+Specify the received Google API key for the Maps SDK for Android in sdk-telemetry/keystore.properties file, which takes the following form:
+```
+1 WEB_API="https://scoring-api.kasko2go.net/api/"
+2 RECEIVER="receiver.kasko2go.net"
+3
+4 GOOGLE_API_KEY="<api_key>"
+5 USER="<user_name>"
+6 PASSWORD="<user_password>"
+7 NAVIGATOR_URL="<https://navigation_url.host.com/>"
+```
 
+2. To work with Google maps services receive a Google Maps API key. The procedure for receiving the key is described in [Maps SDK for Android Quickstart][MSDK].
+Specify the received Google Maps API key in app/src/main/AndroidManifest.xml file in the following form:
+```
+1 <meta-data
+2    android:name="com.google.android.geo.API_KEY"
+3    android:value="<key>" />
+```
 
 
 
@@ -44,4 +78,8 @@ Provide our Technical Support Service with the information about your Github use
 
  
  [git]: <https://github.com/>
-   
+ [TSS]: <mailto:info@kasko2go.com>
+ [UAPIK]: <https://developers.google.com/maps/documentation/android-sdk/get-api-key>
+ [MSDK]: <https://developers.google.com/maps/documentation/android-sdk/start>
+ 
+ 
