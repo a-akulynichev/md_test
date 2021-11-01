@@ -212,7 +212,7 @@ To initialise the SDK, follow these steps:
  ```
  
 
-Next step - [obtaining data about the trips][SAA]
+Next step - [obtaining data about the trips](./Sample_App_%20Android.md)
 
 
 
@@ -224,4 +224,4 @@ Next step - [obtaining data about the trips][SAA]
  [UAPIK]: <https://developers.google.com/maps/documentation/android-sdk/get-api-key>
  [MSDK]: <https://developers.google.com/maps/documentation/android-sdk/start>
  [FB]: <https://firebase.google.com/docs/android/setup#add-config-file>
- [SAA]: <>
+ [SAA]: <https://github.com/a-akulynichev/md_test/blob/main/Sample_App_%20Android.md>
