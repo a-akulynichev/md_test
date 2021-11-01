@@ -1,13 +1,4 @@
-- 👋 Hi, I’m @a-akulynichev
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
 
-<!---
-a-akulynichev/a-akulynichev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
 
 # Kasko2go Open source telematic app for Android
 ## _Description_
@@ -31,8 +22,7 @@ Provide our Technical Support Service with the information about your Github use
 - NAVIGATOR_URL - navigation service address URL. 
 
 
-
-
+![Иллюстрация к проекту](https://github.com/a-akulynichev/md_test/tree/main/Pictures/2.2.jpg)
 
    [git]: <https://github.com/>
    
