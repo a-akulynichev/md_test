@@ -72,6 +72,10 @@ Specify the received Google Maps API key in app/src/main/AndroidManifest.xml fil
 
 
 
+## Firebase services
+
+Provide interaction of your Android application with Firebase services. For this add the google-services.json configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the google-services.json configuration file to your mobile application. 
+
 
 
 
@@ -81,5 +85,5 @@ Specify the received Google Maps API key in app/src/main/AndroidManifest.xml fil
  [TSS]: <mailto:info@kasko2go.com>
  [UAPIK]: <https://developers.google.com/maps/documentation/android-sdk/get-api-key>
  [MSDK]: <https://developers.google.com/maps/documentation/android-sdk/start>
- 
+ [FB]: <https://firebase.google.com/docs/android/setup#add-config-file>
  
