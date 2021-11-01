@@ -1,3 +1,4 @@
+
 # Kasko2go Open source telematic app for Android
 ## _Description_
 The Kasko2go Open source service is developed to determine a driving behaviour of a certain driver. This telematic service works with digitised road maps, has the information on static and dynamic  accident rate of different road sections.
@@ -36,7 +37,7 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 2 RECEIVER="receiver.kasko2go.net"
 ```
 
-2. Add the lines with access parameters received from out Technical Support Service to the end of the sdk-telemetry/keystore.properties file on Step 1. 
+2. Add the lines with access parameters received from out Technical Support Service to the end of the **sdk-telemetry/keystore.properties** file on Step 1. 
 <br/> sdk-telemetry/keystore.properties file takes the following form: 
 
 ```
@@ -51,7 +52,7 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 ## Cartography service
 1. To work with Google autocomplete service receive an API key for the Maps SDK for Android. The procedure for receiving the key is described in [Using API Keys][UAPIK].
-Specify the received Google API key for the Maps SDK for Android in sdk-telemetry/keystore.properties file, which takes the following form:
+Specify the received Google API key for the Maps SDK for Android in **sdk-telemetry/keystore.properties** file, which takes the following form:
 ```
 1 WEB_API="https://scoring-api.kasko2go.net/api/"
 2 RECEIVER="receiver.kasko2go.net"
@@ -63,7 +64,7 @@ Specify the received Google API key for the Maps SDK for Android in sdk-telemetr
 ```
 
 2. To work with Google maps services receive a Google Maps API key. The procedure for receiving the key is described in [Maps SDK for Android Quickstart][MSDK].
-Specify the received Google Maps API key in app/src/main/AndroidManifest.xml file in the following form:
+Specify the received Google Maps API key in **app/src/main/AndroidManifest.xml** file in the following form:
 ```
 1 <meta-data
 2    android:name="com.google.android.geo.API_KEY"
@@ -74,7 +75,7 @@ Specify the received Google Maps API key in app/src/main/AndroidManifest.xml fil
 
 ## Firebase services
 
-Provide interaction of your Android application with Firebase services. For this add the google-services.json configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the google-services.json configuration file to your mobile application. 
+Provide interaction of your Android application with Firebase services. For this add the google-services.json configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the **google-services.json** configuration file to your mobile application. 
 
 
 
