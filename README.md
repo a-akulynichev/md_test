@@ -22,7 +22,7 @@ Provide our Technical Support Service with the information about your Github use
 - NAVIGATOR_URL - navigation service address URL. 
 
 
-![Image text](https://github.com/a-akulynichev/md_test/tree/main/Pictures/2.2.jpg)
+![Image text](https://github.com/a-akulynichev/md_test/blob/main/Pictures/2.2.jpg)
 
  
  [git]: <https://github.com/>
