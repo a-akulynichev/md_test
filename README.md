@@ -127,12 +127,12 @@ The identifiers userId, deviceId, vehicleId are described by the following class
 ```
 
 3. Add speed configs
-To minimise battery power consumption, in SDK you can configure parameters of the autostart_gps_filters filter that has the following set of parameters:
+To minimise battery power consumption, in SDK you can configure parameters of the `autostart_gps_filters` filter that has the following set of parameters:
 - time - periodicity of obtaining coordinates from the GPS system, time in seconds   
 - distance - periodicity of obtaining coordinates from the GPS system, distance travelled in metres
 - uspeed - upper threshold of vehicle speed, km/h
 - dspeed - lower threshold of vehicle speed, km / h
-The parameters of the autostart_gps_filters filter determine the periodicity with which the mobile application receives and sends GPS system data to the server for further processing. The autostart_gps_filters filter starts working  after trip start validation and has the logic:
+The parameters of the `autostart_gps_filters` filter determine the periodicity with which the mobile application receives and sends GPS system data to the server for further processing. The `autostart_gps_filters` filter starts working  after trip start validation and has the logic:
 - if the current GPS speed >= dspeed and GPS speed < uspeed and the previous filtering state differs from the current one, then apply a new filter by time = time (in seconds) and filter by distance = distance (in meters). 
 - If the previous speed value was within the same limits as the current one, then do not change the filter characteristics.
 The autostart_gps_filters filter with default parameter values is a variable with  JSON of the type:
