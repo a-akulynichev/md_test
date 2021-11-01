@@ -32,14 +32,14 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 ## Telematic data
 
-1. Find the sdk-telemetry/keystore.properties file in the form given below in the source code repository:
+1. Find the `sdk-telemetry/keystore.properties` file in the form given below in the source code repository:
 ```
 1 WEB_API="https://scoring-api.kasko2go.net/api/"
 2 RECEIVER="receiver.kasko2go.net"
 ```
 
-2. Add the lines with access parameters received from out Technical Support Service to the end of the **sdk-telemetry/keystore.properties** file on Step 1. 
-<br/> sdk-telemetry/keystore.properties file takes the following form: 
+2. Add the lines with access parameters received from out [Technical Support Service][TSS] to the end of the `sdk-telemetry/keystore.properties` file on Step 1. 
+<br/> `sdk-telemetry/keystore.properties` file takes the following form: 
 
 ```
 1 WEB_API="https://scoring-api.kasko2go.net/api/"
@@ -52,8 +52,8 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 
 ## Cartography service
-1. To work with Google autocomplete service receive an API key for the Maps SDK for Android. The procedure for receiving the key is described in [Using API Keys][UAPIK].
-Specify the received Google API key for the Maps SDK for Android in **sdk-telemetry/keystore.properties** file, which takes the following form:
+1. To work with Google autocomplete service receive an **API key for the Maps SDK for Android**. The procedure for receiving the key is described in [Using API Keys][UAPIK].
+Specify the received Google **API key for the Maps SDK for Android** in `sdk-telemetry/keystore.properties` file, which takes the following form:
 ```
 1 WEB_API="https://scoring-api.kasko2go.net/api/"
 2 RECEIVER="receiver.kasko2go.net"
@@ -64,8 +64,8 @@ Specify the received Google API key for the Maps SDK for Android in **sdk-teleme
 7 NAVIGATOR_URL="<https://navigation_url.host.com/>"
 ```
 
-2. To work with Google maps services receive a Google Maps API key. The procedure for receiving the key is described in [Maps SDK for Android Quickstart][MSDK].
-Specify the received Google Maps API key in **app/src/main/AndroidManifest.xml** file in the following form:
+2. To work with Google maps services receive a **Google Maps API key**. The procedure for receiving the key is described in [Maps SDK for Android Quickstart][MSDK].
+Specify the received Google **Maps API key** in `app/src/main/AndroidManifest.xml` file in the following form:
 ```
 1 <meta-data
 2    android:name="com.google.android.geo.API_KEY"
@@ -76,12 +76,12 @@ Specify the received Google Maps API key in **app/src/main/AndroidManifest.xml**
 
 ## Firebase services
 
-Provide interaction of your Android application with Firebase services. For this add the google-services.json configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the **google-services.json** configuration file to your mobile application. 
+Provide interaction of your Android application with Firebase services. For this add the `google-services.json` configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the `google-services.json` configuration file to your mobile application. 
 
 
 ## Initialization Android SDK
 
-To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our Technical Support: 
+To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our [Technical Support Service][TSS]: 
 1. Add necessary permissions
 - Add necessary permissions to your new project and ask a smartphone user to allow these permissions:
 - Internet
@@ -133,7 +133,7 @@ To minimise battery power consumption, in SDK you can configure parameters of th
 - uspeed - upper threshold of vehicle speed, km/h
 - dspeed - lower threshold of vehicle speed, km / h
 The parameters of the `autostart_gps_filters` filter determine the periodicity with which the mobile application receives and sends GPS system data to the server for further processing. The `autostart_gps_filters` filter starts working  after trip start validation and has the logic:
-- if the current GPS speed >= dspeed and GPS speed < uspeed and the previous filtering state differs from the current one, then apply a new filter by time = time (in seconds) and filter by distance = distance (in meters). 
+- if the urrent GPS speed >= dspeed and GPS speed < uspeed and the previous filtering state differs from the current one, then apply a new filter by time = time (in seconds) and filter by distance = distance (in meters). 
 - If the previous speed value was within the same limits as the current one, then do not change the filter characteristics.
 The autostart_gps_filters filter with default parameter values is a variable with  JSON of the type:
 
