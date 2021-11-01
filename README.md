@@ -212,7 +212,7 @@ To initialise the SDK, follow these steps:
  ```
  
 
-
+Next step - [obtaining data about the trips][SAA]
 
 
 
@@ -224,4 +224,4 @@ To initialise the SDK, follow these steps:
  [UAPIK]: <https://developers.google.com/maps/documentation/android-sdk/get-api-key>
  [MSDK]: <https://developers.google.com/maps/documentation/android-sdk/start>
  [FB]: <https://firebase.google.com/docs/android/setup#add-config-file>
- 
+ [SAA]: <>
