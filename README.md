@@ -217,7 +217,6 @@ To initialise the SDK, follow these steps:
 
 
 
-
  
  
  [git]: <https://github.com/>
