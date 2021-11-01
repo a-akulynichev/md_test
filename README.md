@@ -137,7 +137,7 @@ The parameters of the `autostart_gps_filters` filter determine the periodicity w
 The autostart_gps_filters filter with default parameter values is a variable with  JSON of the type:
 
 ```
-1val configs = """
+1  val configs = """
 2    [
 3    {
 4        "time": 18,
