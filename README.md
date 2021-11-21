@@ -17,7 +17,7 @@ A driver’s smartphone is used as a client telematic device. An accelerometer a
 
 <br/>
 
-This free of charge app can be used to create your own app for Android.
+This free of charge app can be used to create your own app for Android and iOS.
 
 ## Get started
 
