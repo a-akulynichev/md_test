@@ -67,7 +67,7 @@ While configuring IDE Xcode, perform the following steps:
 
 - In the Build Phases section add `SDKScoring.framework` into Link Binary With Libraries subsection.
 
-[fff](./Pictures/3i.png) 
+[fff](./Pictures/1i.png) 
 
 
 
