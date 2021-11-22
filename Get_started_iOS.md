@@ -93,7 +93,12 @@ Allow mobile application operation in the iOS background; to do this, set flags 
 [](./Pictures/4i.jpg) 
 
 
-
+4. SDK configuration <br/>
+To implement SDK into the required classes of your project perform: import SDKScoring.
+Interaction with SDK should be done through:  public class - ScoringUserBehaviourObserver.
+SDK configuration is done using the following methods. <br/>
+Declaration: ``` ScoringUserBehaviourObserver.shared.setup(with userID: String, vehicleID: String, deviceID: String, isBluetoothOn: Bool, settingsArray: [[String : Any]]?, with loggingIsOn: Bool) ``` <br/>
+where: <br/>
 
 
 
