@@ -65,6 +65,6 @@ Provide interaction of your iOS application with Firebase services. For this add
 [git]: <https://github.com/>
  [TSS]: <mailto:info@kasko2go.com>
  [UAPIK_iOS]: <https://developers.google.com/maps/documentation/ios-sdk/get-api-key>
- [FB_iOS]: <https://developers.google.com/maps/documentation/ios-sdk/get-api-key>
+ [FB_iOS]: <https://firebase.google.com/docs/ios/setup>
  [SAA]: <>
 
