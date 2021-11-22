@@ -1,4 +1,4 @@
-
+Open source solution SDK for Android description consists of the following components:
 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
 Provide our [Technical Support Service][TSS] with the information about your Github user account ([Github][git] e-mail address) and receive the following access parameters:
