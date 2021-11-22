@@ -19,7 +19,7 @@ A driver’s smartphone is used as a client telematic device. An accelerometer a
 
 This free of charge app can be used to create your own app for Android and iOS.
 <br/>
-For more more information about Kasko2go Open Sourse service you can read the service [documentation](./OP-Android-Onboarding.pdf).
+For more information about Kasko2go Open Source service read the Service [documentation](./OP-doc_v1.pdf).
 <br/>
 ### Create your own project right now:
 
