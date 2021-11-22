@@ -1,4 +1,4 @@
-# Kasko2go Open source telematic app for Android
+# Kasko2go Open source telematic application
 
 
 ## _Description_
