@@ -59,15 +59,15 @@ Download from the repository and add to your new project, for example into IDE X
 While configuring IDE Xcode, perform the following steps:
 - Set the value Embed & Sign in the General section for the framework `SDKScoring.framework`
 
-[Image text](./Pictures/1i.jpg) 
+[Image text](./Pictures/1i.png) 
 
 - In the Build Phases section add `SDKScoring.framework` into Embed Frameworks subsection
 
-[Image text](./Pictures/2i.jpg) 
+[Image text](./Pictures/2i.png) 
 
 - In the Build Phases section add `SDKScoring.framework` into Link Binary With Libraries subsection.
 
-[Image text](./Pictures/3i.jpg) 
+[Image text](./Pictures/3i.png) 
 
 
 
