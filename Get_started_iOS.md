@@ -48,7 +48,7 @@ override func viewDidLoad() {
 
 ### Firebase services
 
-Provide interaction of your iOS application with Firebase services. For this add the `GoogleService-Info.plist` configuration file to your mobile application. Follow [this link for][FB_iOS] the procedure of adding the `GoogleService-Info.plist` configuration file to your mobile application. 
+Provide interaction of your iOS application with Firebase services. For this add the `GoogleService-Info.plist` configuration file to your mobile application. Follow [this link][FB_iOS] for the procedure of adding the `GoogleService-Info.plist` configuration file to your mobile application. 
 
 <br/>
 
