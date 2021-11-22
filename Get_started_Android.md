@@ -1,4 +1,14 @@
+# Kasko2go Open source for Android
+
 Open source solution SDK for Android description consists of the following components:
+- Steps to start an Open source project;
+- Steps fоr integrating the Open source into your solutions;
+- Description of interaction with the Open source solution APIs to obtain scoring data;
+- Onboarding and main screens for Android.
+
+<br/>
+
+## Steps to start an Open source project
 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
 Provide our [Technical Support Service][TSS] with the information about your Github user account ([Github][git] e-mail address) and receive the following access parameters:
@@ -9,7 +19,7 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 <br/>
 
-## Telematic data
+### Telematic data
 
 1. Find the `sdk-telemetry/keystore.properties` file in the form given below in the source code repository:
 ```
@@ -26,7 +36,7 @@ NAVIGATOR_URL="<https://navigation_url.host.com/>"
 ```
 
 
-## Cartography service
+### Cartography service
 1. To work with Google autocomplete service receive an **API key for the Maps SDK for Android**. The procedure for receiving the key is described in [Using API Keys][UAPIK].
 Specify the received Google **API key for the Maps SDK for Android** in `sdk-telemetry/keystore.properties` file in the following form:
 ```
@@ -42,13 +52,16 @@ Specify the received Google **Maps API key** in `app/src/main/AndroidManifest.xm
 ```
 
 
-
-## Firebase services
+### Firebase services
 
 Provide interaction of your Android application with Firebase services. For this add the `google-services.json` configuration file to your mobile application. Follow [this link for][FB] the procedure of adding the `google-services.json` configuration file to your mobile application. 
 
+<br/>
 
-## Initialization Android SDK
+## Steps fоr integrating the Open source into your solutions
+
+
+### Initialization Android SDK
 
 To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our [Technical Support Service][TSS]: 
 1. Add necessary permissions <br/>
@@ -181,8 +194,12 @@ To initialise the SDK, follow these steps:
     DetectorSdk.start(context, config, getMetadata())
  ```
  
+ <br/>
+
+## Interaction with the Open source solution APIs to obtain scoring data;
 
 Next step - [obtaining data about the trips](./Sample_App_%20Android.md)
+
 
 
 
