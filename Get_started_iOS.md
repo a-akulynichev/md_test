@@ -126,7 +126,8 @@ The mobile application will start receiving and sending GPS system data to the s
 - if the current GPS speed >= dspeed and GPS speed < uspeed and the previous filtering state differs from the current one, then apply a new filter by time = time (in seconds) and filter by distance = distance (in meters).
 - If the previous speed value was within the same limits as the current one, then do not change the filter characteristics. <br/>
 
-`settingsArray` with default parameter values is as follows: <br/>
+`settingsArray` with default parameter values is as follows: 
+<br/>
 
 
 ```
