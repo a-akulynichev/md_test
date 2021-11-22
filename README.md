@@ -18,10 +18,14 @@ A driver’s smartphone is used as a client telematic device. An accelerometer a
 <br/>
 
 This free of charge app can be used to create your own app for Android and iOS.
+<br/>
+For more more information about Kasko2go Open Sourse service you can read the service [documentation](OS_doc).
+<br/>
+### Create your own project right now:
 
 
-- #### [Get started Android](./Get_started_Android.md) 
-- #### [Get started iOS](./Get_started_Android.md) 
+-  [Get started Android](./Get_started_Android.md) 
+-  [Get started iOS](./Get_started_iOS.md) 
 
 
  
@@ -32,3 +36,4 @@ This free of charge app can be used to create your own app for Android and iOS.
  [MSDK]: <https://developers.google.com/maps/documentation/android-sdk/start>
  [FB]: <https://firebase.google.com/docs/android/setup#add-config-file>
  [SAA]: <https://github.com/a-akulynichev/md_test/blob/main/Sample_App_%20Android.md>
+ [OS_doc]: <./OP-Android-Onboarding.pdf>
