@@ -53,6 +53,25 @@ Provide interaction of your iOS application with Firebase services. For this add
 <br/>
 
 ## Steps fоr integrating the Open source into your solutions
+To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our [Technical Support Service][TSS]: 
+1. Add framework to project <br/>
+Download from the repository and add to your new project, for example into IDE Xcode, our framework `SDKScoring.framework`; if needed, set the flag “Copy items if needed“.  <br/>
+While configuring IDE Xcode, perform the following steps:
+- Set the value Embed & Sign in the General section for the framework `SDKScoring.framework`
+
+
+
+- In the Build Phases section add `SDKScoring.framework` into Embed Frameworks subsection
+
+
+
+- In the Build Phases section add `SDKScoring.framework` into Link Binary With Libraries subsection.
+
+
+
+
+
+
 
 
 
