@@ -59,15 +59,41 @@ Download from the repository and add to your new project, for example into IDE X
 While configuring IDE Xcode, perform the following steps:
 - Set the value Embed & Sign in the General section for the framework `SDKScoring.framework`
 
-[Image text](./Pictures/1i.png) 
+[](./Pictures/1i.jpg) 
 
 - In the Build Phases section add `SDKScoring.framework` into Embed Frameworks subsection
 
-[Image text](./Pictures/2i.png) 
+[](./Pictures/2i.jpg) 
 
 - In the Build Phases section add `SDKScoring.framework` into Link Binary With Libraries subsection.
 
-[fff](./Pictures/1i.png) 
+[](./Pictures/3i.jpg) 
+
+
+2. Add necessary permissions <br/>
+Add  necessary permissions to your new project and ask a smartphone user to allow these permissions:
+- geolocation service (requestAlwaysAuthorization)
+- physical activity sensor (queryActivityStarting). 
+To obtain the appropriate access rights, add the following strings to the settings file of your project Info.plist:
+```
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>We use Location services to rate your driving</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>We use Location services to rate your driving</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>We use Location services to rate your driving</string>
+<key>NSMotionUsageDescription</key>
+<string>We only use motion data to rate your driving.</string>
+```
+
+
+3. Background processes <br/>
+Allow mobile application operation in the iOS background; to do this, set flags Location updates and Background fetch for Background Modes in the Signing & Capabilities section in IDE Xcode.
+
+[](./Pictures/4i.jpg) 
+
+
+
 
 
 
