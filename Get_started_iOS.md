@@ -113,7 +113,8 @@ where: <br/>
 |  loggingIsOn  |  flag resposible for collecting and sending logs to the server  |
 
 <br/>
-`settingsArray` contains the following set of parameters:
+
+`settingsArray` contains the following set of parameters: <br/>
 
 |  Name  |  Descriptoin  |
 | :-------------: | :-------------: |
@@ -169,6 +170,21 @@ let exampleSettings: [[String:Any]] = [
 "dspeed": 220
 ]]
 ```
+
+
+4. The trip detection alrogithm is started as follows: <br/>
+Declaration: `ScoringUserBehaviourObserver.shared.startMonitoringForRegion()`.
+ 
+To avoid losing data collected by the mobile application in case of applicaton termination, go to AppDelegate of the application and in the `applicationWillTerminate` method call `ScoringUserBehaviourObserver.shared.terminated()` method:
+```
+func applicationWillTerminate(_ application: UIApplication) {
+        ScoringUserBehaviourObserver.shared.terminated()
+}
+```
+
+When connecting/disconnecting a saved bluetooth device it is necessary to use the following methods:
+- Declaration: `ScoringUserBehaviourObserver.shared.pairedDeviceIsActive()` - when connecting a bluetooth device
+- Declaration: `ScoringUserBehaviourObserver.shared.pairedDeviceIsInactive()` - when disconnecting a  bluetooth device
 
 
 
