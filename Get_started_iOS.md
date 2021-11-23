@@ -192,9 +192,7 @@ When connecting/disconnecting a saved bluetooth device it is necessary to use th
 <br/>
 
 
-
 ## Interaction with the Open source solution APIs to obtain scoring data
-
 
 
 The Open source solution SDK for iOS allows a user to get the following information:
@@ -771,9 +769,6 @@ Authorization/registration is not required.
 <br/>
 
 [Onboarding (intro & initial settings) screens ](./OP-iOS-Onboarding.pdf)
-
-
-
 
 
 
