@@ -172,7 +172,7 @@ let exampleSettings: [[String:Any]] = [
 ```
 
 
-4. The trip detection alrogithm is started as follows: <br/>
+5. The trip detection alrogithm is started as follows: <br/>
 Declaration: `ScoringUserBehaviourObserver.shared.startMonitoringForRegion()`.
  
 To avoid losing data collected by the mobile application in case of applicaton termination, go to AppDelegate of the application and in the `applicationWillTerminate` method call `ScoringUserBehaviourObserver.shared.terminated()` method:
@@ -185,6 +185,588 @@ func applicationWillTerminate(_ application: UIApplication) {
 When connecting/disconnecting a saved bluetooth device it is necessary to use the following methods:
 - Declaration: `ScoringUserBehaviourObserver.shared.pairedDeviceIsActive()` - when connecting a bluetooth device
 - Declaration: `ScoringUserBehaviourObserver.shared.pairedDeviceIsInactive()` - when disconnecting a  bluetooth device
+
+
+
+
+<br/>
+
+
+
+## Interaction with the Open source solution APIs to obtain scoring data
+
+
+
+The Open source solution SDK for iOS allows a user to get the following information:
+
+1. Data on trips made over a specified period of time.
+
+Use the method to receive information on trips made over a specified period of time:
+
+Declaration: `ScoringUserBehaviourObserver.shared.getTripHistory(from beginDate: Date, to endDate: Date, tag: String, and limit: Int, with completion: @escaping ([[String : Any]]?) -> Void)`
+
+where 
+- beginDate - date/time of the beginning of the period;
+- endDate - date/time of the end of the period;
+- tag - trip type;
+- limit - maximum number of trips returned from the server.
+
+The method returns an array of dictionaries with the information on trips:
+
+```
+{
+        "tripData": {
+          "id": UUID, // Unique identifier of the trip
+          "userId": UUID, // Unique identifier of the user
+          "deviceId": UUID, // Unique identifier of the device
+          "vehicleId": UUID, // Unique identifier of the vehicle
+          "startTimestamp": 0, // Start time of the trip (UNIX timestamp)
+          "finishTimestamp": 0, // Finish time of the trip (UNIX timestamp)
+          "tag": "string", // A value that the trip has been tagged with
+          "isBluetoothOn": true, // Is bluetooth on
+          "isBluetoothConnectionEstablished": true // Is bluetooth connection establihed
+        },
+        "scoring": {
+          "scorePercent": 0, // A score of the driving manner safety (100% indicates safe driving)
+          "durationSec": 0, // The duration of the specified period (on seconds)
+          "distanceMeters": 0, // The distance covered by the vehicle during the specified period
+          "accidentness": 0,// An average accidentness score during the specified period
+          "version": "string", // Versions of the components that affect the score
+          "errors": "string" // Error information if any scoring component fails
+        }
+
+```
+
+### Example:
+
+```
+<Array<Dictionary<String, Any>>>
+
+  ▿ 1 : 2 elements
+
+    ▿ 0 : 2 elements
+
+key : "tripData"
+
+      ▿ value : 8 elements
+
+        ▿ 0 : 2 elements
+
+key : userId
+
+value : 087fbef5-d257-434a-9a21-1220cfb797cf
+
+        ▿ 1 : 2 elements
+
+key : deviceId
+
+value : 720c62fc-73bf-4642-b8f6-4ad456662ae5
+
+        ▿ 2 : 2 elements
+
+key : id
+
+value : f942bdc6-0e75-473f-b65f-2a5a7f58b0fe
+
+        ▿ 3 : 2 elements
+
+key : isBluetoothOn
+
+value : <null> { ... }
+
+        ▿ 4 : 2 elements
+
+key : tag
+
+value : driver_in_my_car
+
+        ▿ 5 : 2 elements
+
+key : startTimestamp
+
+value : 1619543328
+
+        ▿ 6 : 2 elements
+
+key : vehicleId
+
+value : a8bf26ed-add5-4884-9bb5-2b656f7ec4f1
+
+        ▿ 7 : 2 elements
+
+key : finishTimestamp
+
+value : 1619543600
+
+    ▿ 1 : 2 elements
+
+key : "scoring"
+
+      ▿ value : 6 elements
+
+        ▿ 0 : 2 elements
+
+key : accidentness
+
+value : 0
+
+        ▿ 1 : 2 elements
+
+key : version
+
+value : scor-1.3.0
+
+        ▿ 2 : 2 elements
+
+key : errors
+
+value : 
+
+        ▿ 3 : 2 elements
+
+key : scorePercent
+
+value : 100
+
+        ▿ 4 : 2 elements
+
+key : distanceMeters
+
+value : 1647
+
+        ▿ 5 : 2 elements
+
+key : durationSec
+
+value : 228
+
+```
+
+
+2. Detailed information on a trip that has been made.
+
+Use the method to receive information on a specified trip:
+Declaration: `ScoringUserBehaviourObserver.shared.getTripScoring(for tripID: String, with completion: @escaping ([String : Any]?) -> Void)`
+where tripID - trip identifier.
+
+The method returns a dictionary which contains detailed information on a specified trip:
+
+```
+"trip": {
+      "tripData": {
+        "id": UUID, // Unique identifier of the trip
+        "userId": UUID, // Unique identifier of the user
+        "deviceId": UUID, // Unique identifier of the device
+        "vehicleId": UUID, // Unique identifier of the vehicle
+        "startTimestamp": 0, // Start time of the trip (UNIX timestamp)
+        "finishTimestamp": 0, // Finish time of the trip (UNIX timestamp)
+        "tag": "string", // A value that the trip has been tagged with
+        "isBluetoothOn": true, // Is bluetooth on
+        "isBluetoothConnectionEstablished": true // Is bluetooth connection establihed
+        },
+      "scoring": {
+        "scorePercent": 0, // A score of the driving manner safety (100% indicates safe driving)
+        "durationSec": 0, // The duration of the specified period (on seconds)
+        "distanceMeters": 0, // The distance covered by the vehicle during the specified period
+        "accidentness": 0,// An average accidentness score during the specified period
+        "version": "string", // Versions of the components that affect the score
+        "errors": "string" // Error information if any scoring component fails
+        }
+    },
+    "events": [
+      {
+        "timestamp": 0, // Date and time of the event (UNIX timestamp)
+        "latitude": 0, // Latitude of the location point (in signed degrees format)
+        "longitude": 0, // Longitude of the location point (in signed degrees format)
+        "speedKph": 0, // The speed of the object at the specified time (in kilometers per hour)
+        "heading": 0, // ompass direction in which the object's bow or nose is pointed (0 or 360 indicates a direction toward true North)
+        "accuracy": 0 // The accuracy of the location information
+      }
+    ],
+    "penalties": [
+      {
+        "timestamp": 0, // Date and time of the event (UNIX timestamp)
+        "type": "string", // The type of the event
+        "durationMs": 0, // The duration (in milliseconds) of the event
+        "value": 0 // Indicates the severity of the event (depends on the type)
+      }
+    ]
+}
+
+```
+
+### Example:
+
+```
+▿ 3 elements
+
+  ▿ 0 : 2 elements
+
+key : "events"
+
+    ▿ value : 2 elements
+
+      ▿ 0 : 6 elements
+
+        ▿ 0 : 2 elements
+
+key : speedKph
+
+value : 32.76331443786621
+
+        ▿ 1 : 2 elements
+
+key : timestamp
+
+value : 1619541688
+
+        ▿ 2 : 2 elements
+
+key : latitude
+
+value : 48.78348541259766
+
+        ▿ 3 : 2 elements
+
+key : longitude
+
+value : 44.57433319091797
+
+        ▿ 4 : 2 elements
+
+key : heading
+
+value : 42.59416961669922
+
+        ▿ 5 : 2 elements
+
+key : accuracy
+
+value : 27.90659523010254
+
+      ▿ 1 : 6 elements
+
+        ▿ 0 : 2 elements
+
+key : speedKph
+
+value : 32.76331443786621
+
+        ▿ 1 : 2 elements
+
+key : timestamp
+
+value : 1619541689
+
+        ▿ 2 : 2 elements
+
+key : latitude
+
+value : 48.78348541259766
+
+        ▿ 3 : 2 elements
+
+key : longitude
+
+value : 44.57433319091797
+
+        ▿ 4 : 2 elements
+
+key : heading
+
+value : 42.59416961669922
+
+        ▿ 5 : 2 elements
+
+key : accuracy
+
+value : 27.90659523010254
+
+  ▿ 1 : 2 elements
+
+key : "penalties"
+
+    ▿ value : 1 element
+
+      ▿ 0 : 4 elements
+
+        ▿ 0 : 2 elements
+
+key : value
+
+value : -9
+
+        ▿ 1 : 2 elements
+
+key : timestamp
+
+value : 1619542035
+
+        ▿ 2 : 2 elements
+
+key : type
+
+value : Acceleration
+
+        ▿ 3 : 2 elements
+
+key : durationMs
+
+value : 1
+
+  ▿ 2 : 2 elements
+
+key : "trip"
+
+    ▿ value : 2 elements
+
+      ▿ 0 : 2 elements
+
+key : tripData
+
+        ▿ value : 8 elements
+
+          ▿ 0 : 2 elements
+
+key : userId
+
+value : 087fbef5-d257-434a-9a21-1220cfb797cf
+
+          ▿ 1 : 2 elements
+
+key : deviceId
+
+value : 720c62fc-73bf-4642-b8f6-4ad456662ae5
+
+          ▿ 2 : 2 elements
+
+key : id
+
+value : 76464bcc-8bf3-4e55-9d57-4eba8b3cb90d
+
+          ▿ 3 : 2 elements
+
+key : isBluetoothOn
+
+value : 1
+
+          ▿ 4 : 2 elements
+
+key : tag
+
+value : driver_in_my_car
+
+          ▿ 5 : 2 elements
+
+key : startTimestamp
+
+value : 1619541685
+
+          ▿ 6 : 2 elements
+
+key : vehicleId
+
+value : a8bf26ed-add5-4884-9bb5-2b656f7ec4f1
+
+          ▿ 7 : 2 elements
+
+key : finishTimestamp
+
+value : 1619542085
+
+      ▿ 1 : 2 elements
+
+key : scoring
+
+        ▿ value : 6 elements
+
+          ▿ 0 : 2 elements
+
+key : accidentness
+
+value : 0
+
+          ▿ 1 : 2 elements
+
+key : version
+
+value : scor-1.3.0
+
+          ▿ 2 : 2 elements
+
+key : errors
+
+value : 
+
+          ▿ 3 : 2 elements
+
+key : scorePercent
+
+value : 82.20716546491759
+
+          ▿ 4 : 2 elements
+
+key : distanceMeters
+
+value : 3385
+
+          ▿ 5 : 2 elements
+
+key : durationSec
+
+value : 347
+
+```
+
+
+
+3. The weighted average value of the score and the total value of vehicle mileage over a certain period of time.
+
+Use the method to receive information:
+
+Declaration: `ScoringUserBehaviourObserver.shared.getCommonScoring(from beginDate: Date, to endDate: Date, tag: String, with completion: @escaping ([String : Any]?) -> Void)`
+
+where
+- beginDate - date/time of the beginning of the period;
+- endDate - date/time of the end of the period;
+- tag - trip type.
+
+The method returns a dictionary which contains the weighted average value of the score and the total value of vehicle mileage:
+
+```
+{
+    "scorePercent": 0, // A score of the driving manner safety (100% indicates safe driving)
+    "durationSec": 0, // The duration of the specified period (on seconds)
+    "distanceMeters": 0, // The distance covered by the vehicle during the specified period
+    "accidentness": 0, // An average accidentness score during the specified period
+    "tripsCount": 0 // A number of trips included into calculation of scoring
+  },
+```
+
+### Example
+
+```
+<Dictionary<String, Any>>
+
+  ▿ some : 5 elements
+
+    ▿ 0 : 2 elements
+
+key : "tripsCount"
+
+value : 10
+
+    ▿ 1 : 2 elements
+
+key : "accidentness"
+
+value : 0
+
+    ▿ 2 : 2 elements
+
+key : "scorePercent"
+
+value : 86.92312172776988
+
+    ▿ 3 : 2 elements
+
+key : "distanceMeters"
+
+value : 92094
+
+    ▿ 4 : 2 elements
+
+key : "durationSec"
+
+value : 9809
+```
+
+4. Trip type change 
+
+Changing the trip type is done by the method
+
+Declaration: `ScoringUserBehaviourObserver.shared.setTripType(for tripID: String, tag: String, with completion: @escaping (String, Bool) -> Void)`
+
+where
+- tripID - trip identifier;
+- tag - trip type to be set. 
+
+There are four trip types:
+- user as a driver of his car - “driver_in_ my_car”;
+- user as a driver of someone else's car - “driver_not_in_my_car”;
+- user as a passenger of a car- “passenger”;
+- user travels by public transport - “public_transport”.
+
+The method returns two variables: 
+- “String” - new trip type assigned to a trip;
+- “Bool” - true if the trip type has been changed, false if the trip type has not been changed.
+
+
+
+5. Building a vehicle route/routes, getting information about dangerous road sections.
+
+Use the request method :
+
+`ScoringUserBehaviourObserver.shared.getRecommendedTrips(for originLat: Double, and originLon: Double, for destinationLat: Double, and destinationLon: Double, and routeTime: Int, with completion: @escaping ([RecommendedTrip]?) -> Void)`
+
+where:
+- originLat - latitude of start trip point;
+- originLon - longitude of start trip point;
+- destinationLat - latitude of finish trip point;
+- destinationLon - longitude of finish trip point;
+- routeTime - time of trip start, UNIX timestamp.
+
+Response parameters:
+
+Array of trips - [RecommendedTrip]
+
+```
+distance: Double = 0  // total trip mileage, metres
+duration: Int = 0  // total trip duration, seconds
+riskCountForUi: Int = 0  // route risk value to display on the user interface: from - 1 (bad route) to 5 (good route)
+accidentRisk: Double = 0  // total route risk
+lowRiskPercentage: Double = 0  // minimum risk percentage
+normalRiskPercentage: Double = 0  // normal risk percentage
+highRiskPercentage: Double = 0  // high risk percentage
+lowRiskDistance: Double = 0  // trip mileage with low accidents risk, meters
+normalRiskDistance: Double = 0  // trip mileage with medium accidents risk, meters
+highRiskDistance: Double = 0  // trip mileage with high accidents risk, meters
+
+waypoints = [Waypoint]()  // coordinates of intermediate route points 
+
+lowRoute = [String]()  // a route with low accidents risk
+normalRoute = [String]()  // a route with medium accidents risk
+highRoute = [String]()  // a route with high accidents risk
+
+baseRoute: String = “”  // base (selected) route 
+lowColor = UIColor()  // colour for viewing a route with low accidents risk on the map 
+normalColor = UIColor()  // colour for viewing a route with medium accidents risk on the map 
+highColor = UIColor()  // colour for viewing a route with high accidents risk on the map
+baseColor = UIColor()  // colour for viewing a selected route on the map 
+inactiveRouteColor = UIColor()  // colour for inactive (alternative) route displaying in the user interface  
+```
+
+where:
+- lowRoute, normalRoute, highRoute - arrays of routes polyline;
+- baseRoute - routes polyline;
+- waypoints - array of points for Google navigation service:
+
+```
+"waypoints": [
+        {
+          "lat": ,// latitude
+          "lng":  // longitude
+        },
+             ]
+```
+
+
+
+
+
+
+
+
 
 
 
