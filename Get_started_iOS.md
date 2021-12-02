@@ -22,17 +22,13 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 ### Telematic data
 
-1. Find the `APIRequestManager` file in the source code repository. Add the lines with access parameters received from out Technical Support Service to the end of the `APIRequestManager` file:
+Find the `Settings` file in the source code repository. Add the lines with access parameters received from out [Technical Support Service][TSS] to the end of the `Settings` file:
 ```
-prodURL = “https://scoring-api.kasko2go.net/”
-2username = “<user_name>”
-3password = “<user_password>”
-4tripsURL = “<https://navigation_url.host.com/>”
-```
-
-2. Find the `DataSender` file in the source code repository. Add the lines with parameters received from out [Technical Support Service][TSS] to the end of the `DataSender` file:
-```
-sendHost = “receiver.kasko2go.net”
+webAPI = “https://scoring-api.kasko2go.net/”
+reciver = “receiver.kasko2go.net”
+user = “<user_name>”
+password = “<user_password>”
+navigatorURL = “<https://navigation_url.host.com/>”
 ```
 
 
