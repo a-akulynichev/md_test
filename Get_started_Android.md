@@ -21,19 +21,15 @@ Provide our [Technical Support Service][TSS] with the information about your Git
 
 ### Telematic data
 
-1. Find the `sdk-telemetry/keystore.properties` file in the form given below in the source code repository:
+Find the `sdk-telemetry/keystore.properties` file in the source code repository. Add the lines with access parameters received from out [Technical Support Service][TSS] to the end of the `sdk-telemetry/keystore.properties` file:
 ```
 WEB_API="https://scoring-api.kasko2go.net/api/"
 RECEIVER="receiver.kasko2go.net"
-```
-
-2. Add the following lines with access parameters received from out [Technical Support Service][TSS] to the end of the `sdk-telemetry/keystore.properties` file on Step 1: 
-
-```
 USER="<user_name>"
 PASSWORD="<user_password>"
 NAVIGATOR_URL="<https://navigation_url.host.com/>"
 ```
+
 
 
 ### Cartography service
