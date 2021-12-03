@@ -8,7 +8,9 @@ Open source solution SDK for Android description consists of the following compo
 
 <br/>
 
-## Steps to start an Open source project <a name="start"></a>
+
+<a name="start"></a>
+## Steps to start an Open source project 
 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
 Provide our [Technical Support Service][TSS] with the information about your Github user account ([Github][git] e-mail address) and receive the following access parameters:
@@ -54,7 +56,8 @@ Provide interaction of your Android application with Firebase services. For this
 
 <br/>
 
-## Steps fоr integrating the Open source into your solutions <a name="integrating"></a>
+<a name="integrating"></a>
+## Steps fоr integrating the Open source into your solutions 
 
 
 ### Initialization Android SDK
@@ -193,8 +196,8 @@ To initialise the SDK, follow these steps:
  <br/>
 
 
-
-## Interaction with the Open source solution APIs to obtain scoring data <a name="scoring"></a>
+<a name="scoring"></a>
+## Interaction with the Open source solution APIs to obtain scoring data 
 
 
 
@@ -386,6 +389,7 @@ When application is started for the first time, user should go through onboardin
 Authorization/registration is not required.
 <br/>
 
+<a name="onboarding"></a>
 [Onboarding (intro & initial settings) screens ](./OP-Android-Onboarding.pdf)
 
  
