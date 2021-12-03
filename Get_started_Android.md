@@ -4,7 +4,7 @@ Open source solution SDK for Android description consists of the following compo
 - [Steps to start an Open source project](#start)
 - [Steps fоr integrating the Open source into your solutions](#integrating);
 - [Description of interaction with the Open source solution APIs to obtain scoring data](#scoring);
-- [Onboarding and main screens for Android](#onbording).
+- [Onboarding and main screens for Android](#onboarding).
 
 <br/>
 
