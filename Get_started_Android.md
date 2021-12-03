@@ -1,14 +1,14 @@
 # Kasko2go Open source for Android
 
 Open source solution SDK for Android description consists of the following components:
-- Steps to start an Open source project;
-- Steps fоr integrating the Open source into your solutions;
-- Description of interaction with the Open source solution APIs to obtain scoring data;
-- Onboarding and main screens for Android.
+- [Steps to start an Open source project](#start)
+- [Steps fоr integrating the Open source into your solutions](#integrating);
+- [Description of interaction with the Open source solution APIs to obtain scoring data](#scoring);
+- [Onboarding and main screens for Android](#onbording).
 
 <br/>
 
-## Steps to start an Open source project
+## Steps to start an Open source project <a name="start"></a>
 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
 Provide our [Technical Support Service][TSS] with the information about your Github user account ([Github][git] e-mail address) and receive the following access parameters:
@@ -54,7 +54,7 @@ Provide interaction of your Android application with Firebase services. For this
 
 <br/>
 
-## Steps fоr integrating the Open source into your solutions
+## Steps fоr integrating the Open source into your solutions <a name="integrating"></a>
 
 
 ### Initialization Android SDK
@@ -194,7 +194,7 @@ To initialise the SDK, follow these steps:
 
 
 
-## Interaction with the Open source solution APIs to obtain scoring data
+## Interaction with the Open source solution APIs to obtain scoring data <a name="scoring"></a>
 
 
 
