@@ -380,7 +380,7 @@ Response parameters:
 ) : Parcelable
 ```
 
-
+<a name="onboarding"></a>
 # Onboarding and main screens for Android
 
 When application is started for the first time, user should go through onboarding screens starting from 0.0 to 1.6. After that Main screen should be opened and it should be opened automatically every time when the app is started, user should go through onboarding screens starting from 2.0 to 4.1. 
@@ -389,7 +389,7 @@ When application is started for the first time, user should go through onboardin
 Authorization/registration is not required.
 <br/>
 
-<a name="onboarding"></a>
+
 [Onboarding (intro & initial settings) screens ](./OP-Android-Onboarding.pdf)
 
  
