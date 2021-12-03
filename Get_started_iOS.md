@@ -1,13 +1,15 @@
 # Kasko2go Open source for iOS
 
 Open source solution SDK for iOS description consists of the following components:
-- Steps to start an Open source project;
-- Steps fоr integrating the Open source into your solutions;
-- Description of interaction with the Open source solution APIs to obtain scoring data;
-- Onboarding and main screens for iOS.
+- [Steps to start an Open source project](#start)
+- [Steps fоr integrating the Open source into your solutions](#integrating);
+- [Description of interaction with the Open source solution APIs to obtain scoring data](#scoring);
+- [Onboarding and main screens for iOS](#onboarding).
+
 
 <br/>
 
+<a name="start"></a>
 ## Steps to start an Open source project
 
 To work with the Open source project you need to receive the access to our repositories on [Github][git] that contain source codes and technical documentation of the project.
@@ -48,6 +50,7 @@ Provide interaction of your iOS application with Firebase services. For this add
 
 <br/>
 
+<a name="integrating"></a>
 ## Steps fоr integrating the Open source into your solutions
 To integrate the Open source solution SDK into your new project, you need to perform the following steps after contacting our [Technical Support Service][TSS]: 
 1. Add framework to project <br/>
@@ -187,7 +190,7 @@ When connecting/disconnecting a saved bluetooth device it is necessary to use th
 
 <br/>
 
-
+<a name="scoring"></a>
 ## Interaction with the Open source solution APIs to obtain scoring data
 
 
@@ -754,7 +757,7 @@ where:
              ]
 ```
 
-
+<a name="onboarding"></a>
 # Onboarding and main screens for Android
 
 
