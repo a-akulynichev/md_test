@@ -758,7 +758,7 @@ where:
 ```
 
 <a name="onboarding"></a>
-# Onboarding and main screens for Android
+# Onboarding and main screens for iOS
 
 
 When application is started for the first time, user should go through onboarding screens starting from 0.0 to 1.8. After that Main screen should be opened and it should be opened automatically every time when the app is started, user should go through onboarding screens starting from 2.0 to 4.1.
